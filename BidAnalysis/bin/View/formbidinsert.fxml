@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.*?>
+<?import java.lang.String?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+
+
+<AnchorPane prefHeight="550" prefWidth="680"
+	xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+	<Label layoutX="20.0" layoutY="10.0" text="[공고일반]" />
+
+	<HBox layoutX="20.0" layoutY="40.0" prefHeight="400.0" prefWidth="653.0">
+		<children>
+			<VBox>
+				<spacing>10</spacing>
+				<HBox prefHeight="23.0" prefWidth="90.0">
+					<Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0"
+						prefHeight="22.0" prefWidth="84.0" text="입찰공고번호 : " />
+				</HBox>
+				<HBox>
+					<Label alignment="CENTER" prefHeight="23.0" text="         공고명 : " />
+				</HBox>
+				<HBox>
+					<Label alignment="CENTER" prefHeight="23.0" text="      공고기관 : " />
+				</HBox>
+				<HBox>
+					<Label alignment="CENTER" prefHeight="23.0" text="      수요기관 : " />
+				</HBox>
+
+				<HBox>
+					<Label alignment="CENTER" prefHeight="23.0" text="      계약방법 : " />
+				</HBox>
+
+				<HBox>
+					<Label alignment="CENTER" prefHeight="23.0" text="입찰개시일시 : " />
+				</HBox>
+				<HBox>
+					<Label alignment="CENTER" prefHeight="23.0" text="입찰마감일시 : " />
+				</HBox>
+				<HBox>
+					<Label alignment="CENTER" prefHeight="23.0" text="물품식별번호 : " />
+				</HBox>
+				<HBox>
+					<Label alignment="CENTER" prefHeight="23.0" text="      추정가격 : " />
+				</HBox>
+				<Separator></Separator>
+				<HBox>
+					<Label alignment="CENTER" prefHeight="23.0" text="      기초가격 : " />
+				</HBox>
+				<HBox>
+					<Label alignment="CENTER" prefHeight="23.0" text="      입찰가격 : " />
+				</HBox>
+				<Separator></Separator>
+				<HBox>
+					<Label alignment="CENTER" prefHeight="23.0" text="      입찰결과 : " />
+				</HBox>
+			</VBox>
+			<VBox>
+				<spacing>10</spacing>
+				<HBox prefHeight="23.0" prefWidth="557.0">
+					<spacing>10</spacing>
+
+					<TextField id="txtBidNum" layoutX="100.0" layoutY="40.0"
+						prefHeight="23.0" prefWidth="100.0" promptText="00000000000" />
+					<Label alignment="CENTER" layoutX="200.0" prefHeight="23.0"
+						prefWidth="25.0" text=" - " />
+					<TextField id="txtBidTrial" layoutX="280.0" layoutY="40.0"
+						prefHeight="23.0" prefWidth="30" promptText="00" />
+
+					<Label alignment="CENTER" prefHeight="23.0" text="   " />
+
+					<TextField id="txtBidClass" prefHeight="23.0" prefWidth="70"
+						promptText="일반/긴급" />
+				</HBox>
+				<HBox prefHeight="23.0" prefWidth="557.0">
+					<TextField id="txtBidName" prefHeight="23.0" prefWidth="550" />
+				</HBox>
+				<HBox prefHeight="23.0" prefWidth="557.0">
+					<TextField id="txtBidAgency" prefHeight="23.0" prefWidth="280" />
+				</HBox>
+				<HBox prefHeight="23.0" prefWidth="557.0">
+					<TextField id="txtBidDemand" prefHeight="23.0" prefWidth="280" />
+				</HBox>
+				<HBox prefHeight="23.0" prefWidth="557.0">
+					<TextField id="txtBidMethod"></TextField>
+				</HBox>
+				<HBox prefHeight="23.0" prefWidth="557.0">
+					<TextField id="txtBidStart" alignment="CENTER" prefWidth="180"
+						promptText="YYYY/MM/DD HH:MI" />
+				</HBox>
+				<HBox prefHeight="23.0" prefWidth="557.0">
+					<spacing>5</spacing>
+
+					<TextField id="txtBidEnd" alignment="CENTER" prefWidth="180"
+						promptText="YYYY/MM/DD HH:MI" />
+				</HBox>
+				<HBox prefHeight="23.0" prefWidth="500">
+					<spacing>5</spacing>
+					<TextField id="txtItemDetailNum" alignment="CENTER"
+						prefHeight="23.0" prefWidth="100" promptText="0000000000" />
+				</HBox>
+
+
+				<HBox prefHeight="23.0" prefWidth="500">
+					<spacing>5</spacing>
+					<TextField id="txtPriceEstimate" alignment="CENTER_RIGHT"
+						prefHeight="23.0" prefWidth="150" promptText=" ,표 없이 입력하세요. " />
+					<Label alignment="CENTER" prefHeight="23.0" text="원" />
+				</HBox>
+				<Separator></Separator>
+				<HBox prefHeight="23.0" prefWidth="500">
+					<spacing>5</spacing>
+					<TextField id="txtBaseAmount" alignment="CENTER_RIGHT"
+						prefHeight="23.0" prefWidth="150" promptText=" ,표 없이 입력하세요. " />
+					<Label alignment="CENTER" prefHeight="23.0" text="원" />
+				</HBox>
+				<HBox prefHeight="23.0" prefWidth="500">
+					<spacing>5</spacing>
+					<TextField id="txtBidAmount" alignment="CENTER_RIGHT"
+						prefHeight="23.0" prefWidth="150" promptText=" ,표 없이 입력하세요. " />
+					<Label alignment="CENTER" prefHeight="23.0" text="원" />
+				</HBox>
+				<Separator></Separator>
+				<HBox prefHeight="23.0" prefWidth="500">
+					<TextField id="txtWinResult" alignment="CENTER_RIGHT"
+						prefHeight="23.0" prefWidth="70" promptText="낙찰/탈락" />
+				</HBox>
+			</VBox>
+		</children>
+	</HBox>
+	<Button id="btnBidInsertSave" layoutX="292.0" layoutY="480.0"
+		text="저장" />
+	<Button id="btnBidInsertCancel" layoutX="347.0" layoutY="480.0"
+		text="취소" />
+</AnchorPane>

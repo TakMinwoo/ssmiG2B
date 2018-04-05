@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.collections.ObservableList?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1">
+	<!-- TODO Add Nodes -->
+
+	<padding>
+		<Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+	</padding>
+	<center>
+		<GridPane hgap="10.0" vgap="10.0">
+			<children>
+				<Label text="공고번호:" prefWidth="80" />
+				<Label text="차수:" prefWidth="80" GridPane.rowIndex="1" />
+				<Label text="분류:" prefWidth="80" GridPane.rowIndex="2" />
+				<Label text="공고명:" prefWidth="80" GridPane.rowIndex="3" />
+				<Label text="공고기관:" prefWidth="80" GridPane.rowIndex="4" />
+				<Label text="수요기관:" prefWidth="80" GridPane.rowIndex="5" />
+				<Label text="계약방법:" prefWidth="80" GridPane.rowIndex="6" />
+				<Label text="입찰개시일:" prefWidth="80" GridPane.rowIndex="7" />
+				<Label text="입찰마감일:" prefWidth="80" GridPane.rowIndex="8" />
+				<Label text="물품식별번호:" prefWidth="80" GridPane.rowIndex="9" />
+				<Label text="추정가격:" prefWidth="80" GridPane.rowIndex="10" />
+				<Label text="기초가격" prefWidth="80" GridPane.rowIndex="11" />
+				<Label text="입찰가격" prefWidth="80" GridPane.rowIndex="12" />
+				<Label text="입찰결과" prefWidth="80" GridPane.rowIndex="13" />
+
+				<TextField id="txtBidNum" prefWidth="100"
+					GridPane.columnIndex="1" />
+				<TextField id="txtBidTrial" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="1" />
+				<TextField id="txtBidClass" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="2" />
+				<TextField id="txtBidName" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="3" />
+				<TextField id="txtBidAgency" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="4" />
+				<TextField id="txtBidDemand" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="5" />
+				<TextField id="txtBidMethod" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="6" />
+				<TextField id="txtBidStart" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="7" />
+				<TextField id="txtBidEnd" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="8" />
+				<TextField id="txtItemDetailNum" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="9" />
+				<TextField id="txtPriceEstimate" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="10" />
+				<TextField id="txtBaseAmount" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="11" />
+				<TextField id="txtBidAmount" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="12" />
+				<TextField id="txtWinResult" prefWidth="100"
+					GridPane.columnIndex="1" GridPane.rowIndex="13" />
+			</children>
+		</GridPane>
+	</center>
+	<bottom>
+		<HBox alignment="CENTER" spacing="20.0">
+			<BorderPane.margin>
+				<Insets top="20.0" bottom="10.0" />
+			</BorderPane.margin>
+			<children>
+				<Button id="btnBidModifySave" text="저장" />
+				<Button id="btnBidModifyCancel" text="취소" />
+			</children>
+		</HBox>
+	</bottom>
+</BorderPane>
